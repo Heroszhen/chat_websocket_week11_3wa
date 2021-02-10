@@ -1,0 +1,53 @@
+extends layout.pug
+
+block content
+    nav.navbar.navbar-expand-md.navbar-dark.bg-primary
+      .container-fluid
+        a.navbar-brand(href='#') CHAT
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item
+                button.btn.btn-info(type='button',id='coucou') coucou le serveur
+            li.nav-item.dropdown
+                a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    span.text-white Les channels
+                ul.dropdown-menu#allchannels(aria-labelledby='navbarDropdownMenuLink')
+                    li
+                        div.dropdown-item Action
+          .d-flex
+            button.btn.btn-primary(type='button',id='btnconnexion') Me connecter
+            button#logingoogle.btn.btn-outline-danger Login with google
+            button.btn.btn-danger.d-none(type='button',id='btndeconnexion') Quitter
+            
+   
+    .container-fluid#chat.d-none 
+        .row.mb-5
+            .col-md-3(style={background:"rgb(247, 247, 247)"})
+                .div.fw-bold.h3 Les utilisateurs
+                ul#listingUsers
+            .col-md-9(style={"padding-left":"3px","padding-right":"3px"})
+                div.mb-1#allmessages 
+                    div.p-2#listingMessages
+                div#usertyping.pb-2(style={"height":"15px","color":"gray","font-size":"12px"})
+                div#ib
+                    div 
+                        input#createMessage.form-control(type='text')
+                    div.d-grid.gap-2
+                        button.btn.btn-primary#sendMessage(type='button') Envoyer    
+                
+        
+    template#usersTpl
+        li
+    
+    template#messagesTpl
+      div.onemessage
+        div.author
+        div.time
+        div.message
+
+    template#channelsTpl
+        li.onechannel
+            div.dropdown-item
+    

@@ -1,0 +1,67 @@
+ul{
+    list-style:none;
+    padding-left:0px;
+}
+ul#listingUsers li{
+    padding-top:10px;
+    padding-left:10px;
+    border-bottom:1px solid gainsboro;
+}
+ul#listingUsers li:hover{
+    cursor: pointer;
+    background-color: white;
+    color:blue;
+}
+#allmessages>div{
+    width:100%;
+    height:600px;
+    overflow: auto;
+    border-radius: 5px;
+}
+#listingMessages .onemessage{
+    display:flex;
+    width:100%;
+    flex-wrap: wrap;
+    margin-bottom:15px;
+}
+#listingMessages .onemessage.right{
+    padding-right:50%;
+}
+#listingMessages .onemessage.left{
+    padding-left:50%;
+    justify-content: flex-end;
+}
+#listingMessages .onemessage.right .message{
+    background-color: cornsilk;
+}
+#listingMessages .onemessage.left .message{
+    background-color: darkorchid;
+    color:white;
+}
+#listingMessages .onemessage .message{
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+}
+
+#listingMessages .onemessage .author{
+    margin-right:5px;
+    font-weight: bold;
+}
+#listingMessages .onemessage .time{
+    font-size:12px;
+    display:flex;
+    align-items: center;
+}
+
+#ib {
+    display:flex;
+    width:100%;
+}
+#ib>div:nth-child(1){
+    width:80%;
+}
+#ib>div:nth-child(2){
+    width:20%;
+    padding-left:5px;
+}

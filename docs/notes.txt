@@ -1,0 +1,12 @@
+npm install nodemon --save-dev
+npm install express --save
+npm i pug --save
+npm i body-parser --save
+npm install socket.io
+npm i browser-refresh --save-dev
+npm i smile2emoji
+npm i xss
+
+
+convert html to pug
+https://html2pug.now.sh/
